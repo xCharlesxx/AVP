@@ -1,13 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Code.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Main.cs">
     <Files>
-      <File FileName="Assets\Code.cs" Line="29" Column="4" />
-      <File FileName="Assets\BlackBehaviour.cs" Line="9" Column="2" />
+      <File FileName="Assets\BlackBehaviour.cs" Line="158" Column="42" />
+      <File FileName="Assets\Main.cs" Line="32" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\BlackBehaviour.cs" line="80" offsetX="515" offsetY="1264" expression="gridref [posx, posy + 1].transform.childCount" liveUpdate="False" />
+    <Watch file="Assets\BlackBehaviour.cs" line="71" offsetX="562" offsetY="1116" expression="gridref [posx + 1, posy].transform.childCount" liveUpdate="False" />
+    <Watch file="Assets\BlackBehaviour.cs" line="89" offsetX="515" offsetY="1408" expression="gridref [posx, posy - 1].transform.childCount" liveUpdate="False" />
+    <Watch file="Assets\BlackBehaviour.cs" line="72" offsetX="1006" offsetY="1042" expression="getAverageLocationPos().x" liveUpdate="False" />
+    <Watch file="Assets\BlackBehaviour.cs" line="73" offsetX="935" offsetY="1152" expression="transform.position.x" liveUpdate="False" />
+    <Watch file="Assets\BlackBehaviour.cs" line="73" offsetX="935" offsetY="1128" expression="transform.position.y" liveUpdate="False" />
+    <Watch file="Assets\BlackBehaviour.cs" line="71" offsetX="587" offsetY="1049" expression="posx" liveUpdate="False" />
+    <Watch file="Assets\BlackBehaviour.cs" line="71" offsetX="585" offsetY="1074" expression="posy" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>
