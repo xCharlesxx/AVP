@@ -1,0 +1,14 @@
+D:\Charlie\AVP\LevelMaker\LevelMaker\bin\Debug\LevelMaker.exe.config
+D:\Charlie\AVP\LevelMaker\LevelMaker\bin\Debug\LevelMaker.exe
+D:\Charlie\AVP\LevelMaker\LevelMaker\bin\Debug\LevelMaker.pdb
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\LevelMaker.csprojResolveAssemblyReference.cache
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\MainWindow.g.cs
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\App.g.cs
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\LevelMaker_MarkupCompile.cache
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\LevelMaker_MarkupCompile.lref
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\MainWindow.baml
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\LevelMaker.g.resources
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\LevelMaker.Properties.Resources.resources
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\LevelMaker.csproj.GenerateResource.Cache
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\LevelMaker.exe
+D:\Charlie\AVP\LevelMaker\LevelMaker\obj\Debug\LevelMaker.pdb

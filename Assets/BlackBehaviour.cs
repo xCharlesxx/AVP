@@ -38,18 +38,28 @@ public class BlackBehaviour : MonoBehaviour {
 		transform.position = new Vector3 (transform.position.x + changeX, transform.position.y + changeY, 0); 
 
 
-		if (changeX == 0 && changeY == 0 && transform.parent.tag != "Fill")
-			switch (Main.Style) 
+		if (changeX == 0 && changeY == 0)  
+		{
+			if (transform.parent.tag == "Fill") 
 			{
-		case Main.style.Search: 
-			move (); 
-			break; 
-			case Main.style.Sweep:  
-			sweep (); 
-			break; 
-			case Main.style.hybrid: 
-			break; 
+				transform.parent.tag = "Filled";
+				transform.SetParent (null); 
+				enabled = false; 
 			}
+			else
+			switch (Main.Style) {
+			case Main.style.Search: 
+				move (); 
+				break; 
+			case Main.style.Sweep:  
+				sweep (); 
+				break; 
+			case Main.style.hybrid: 
+				break; 
+			}
+		}
+
+
 	}
 		
 	void sweep()
@@ -101,12 +111,13 @@ public class BlackBehaviour : MonoBehaviour {
 		int posy = Mathf.RoundToInt (transform.parent.position.y); 
 		List<System.Action> methodList = new List<System.Action>(); 
 		methodList.Add (() => Left (posx, posy));
-		methodList.Add (() => Right (posx, posy));
-		//methodList.Add (() => Down (posx, posy));
+		//methodList.Add (() => Right (posx, posy));
+		methodList.Add (() => Down (posx, posy));
 		methodList.Add (() => Up (posx, posy));
-		methodList.Add (() => Up (posx, posy));
-		methodList.Add (() => Up (posx, posy));
-		methodList.Add (() => Up (posx, posy));
+		methodList.Add (() => Left (posx, posy));
+		methodList.Add (() => Left (posx, posy));
+		methodList.Add (() => Left (posx, posy));
+		methodList.Add (() => Left (posx, posy));
 
 		//prevPos.transform.parent = gridref [posx, posy].transform; 
 		for (int i = 0; i < methodList.Count; i++) 
@@ -124,12 +135,18 @@ public class BlackBehaviour : MonoBehaviour {
 	void Left(int posx, int posy)
 	{
 		//Left
-		if (posx != 0)
-		if (gridref [posx - 1, posy].transform.childCount == 0) 
-		{
-			transform.SetParent (gridref [posx - 1, posy].transform);
-			return; 
-		}
+		if (posx != 0) {
+			if (gridref [posx - 1, posy].transform.childCount == 0) {
+				transform.SetParent (gridref [posx - 1, posy].transform);
+				return; 
+			} 
+		} else
+			Destroy (gameObject); 
+//		else if (gridref [posx - 1, posy].transform.childCount == 1 && gridref [posx - 1, posy].tag == "Fill")
+//		{
+//			transform.SetParent (gridref [posx - 2, posy].transform);
+//			return; 
+//		}
 	}
 
 	void Right(int posx, int posy)
@@ -153,12 +170,12 @@ public class BlackBehaviour : MonoBehaviour {
 				transform.SetParent (gridref [posx, posy + 1].transform);
 				return; 
 			}
-			else if (gridref [posx, posy + 1].transform.childCount == 1 && gridref [posx, posy + 1].tag == "Fill")
-			{
-				if (posy != gridref.GetLength (1) - 2)
-				transform.SetParent (gridref [posx, posy + 2].transform);
-				return; 
-			}
+//			else if (gridref [posx, posy + 1].transform.childCount == 1 && gridref [posx, posy + 1].tag == "Fill")
+//			{
+//				if (posy != gridref.GetLength (1) - 2)
+//				transform.SetParent (gridref [posx, posy + 2].transform);
+//				return; 
+//			}
 		}
 	}
 	void Down(int posx, int posy)
