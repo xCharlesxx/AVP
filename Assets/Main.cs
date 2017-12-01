@@ -15,7 +15,8 @@ public class Main : MonoBehaviour {
     const int GridHeight = 30;
     const int GridWidth = 100;
     const int numBlacks = 1000;
-
+    [Range(1,3)]
+    public int FileNumber = 1; 
     public GameObject blackTemplate; 
 	GameObject[,] grid = new GameObject[GridWidth, GridHeight];
 	BlackBehaviour[] blacks = new BlackBehaviour[numBlacks]; 
@@ -24,7 +25,7 @@ public class Main : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		int count = 0;
-        bool[,] pixelImage = GetValuesFromFile("..\\AVP\\LevelMaker\\LevelMaker\\Levels\\New Game\\1");
+        bool[,] pixelImage = GetValuesFromFile("..\\AVP\\LevelMaker\\LevelMaker\\Levels\\New Game\\"+ FileNumber.ToString());
         for (int i = 0; i < GridHeight; i++)
 		{
 		    for (int x = 0; x < GridWidth; x++) 
