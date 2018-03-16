@@ -13,8 +13,8 @@ public class BlackBehaviour : MonoBehaviour {
 	{
 		transform.position = new Vector3 (X, Y);  
 		gridref = GR; 
-		prevPos = new GameObject (); 
-		averageLocationPos = getAverageLocationPos (); 
+		//prevPos = new GameObject (); 
+		//averageLocationPos = getAverageLocationPos (); 
 	}
 	// Use this for initialization
 	void Start () {
@@ -40,13 +40,13 @@ public class BlackBehaviour : MonoBehaviour {
 
 		if (changeX == 0 && changeY == 0)  
 		{
-			if (transform.parent.tag == "Fill") 
-			{
-				transform.parent.tag = "Filled";
-				transform.SetParent (null); 
-				enabled = false; 
-			}
-			else
+//			if (transform.parent.tag == "Fill") 
+//			{
+//				transform.parent.tag = "Filled";
+//				transform.SetParent (null); 
+//				enabled = false; 
+//			}
+//			else
 			switch (Main.Style) {
 			case Main.style.Search: 
 				move (); 
@@ -139,8 +139,9 @@ public class BlackBehaviour : MonoBehaviour {
 			if (gridref [posx - 1, posy].transform.childCount == 0) {
 				transform.SetParent (gridref [posx - 1, posy].transform);
 				return; 
-			} 
-		} else
+			}
+		}
+	else
 			Destroy (gameObject); 
 //		else if (gridref [posx - 1, posy].transform.childCount == 1 && gridref [posx - 1, posy].tag == "Fill")
 //		{
@@ -164,7 +165,6 @@ public class BlackBehaviour : MonoBehaviour {
 	{
 		//Up
 		if (posy != gridref.GetLength (1) - 1)
-		{
 			if (gridref [posx, posy + 1].transform.childCount == 0) 
 			{
 				transform.SetParent (gridref [posx, posy + 1].transform);
@@ -176,7 +176,6 @@ public class BlackBehaviour : MonoBehaviour {
 //				transform.SetParent (gridref [posx, posy + 2].transform);
 //				return; 
 //			}
-		}
 	}
 	void Down(int posx, int posy)
 	{

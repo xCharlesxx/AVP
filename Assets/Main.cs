@@ -12,9 +12,9 @@ public class Main : MonoBehaviour {
 		Find,
 		hybrid
 	};
-    const int GridHeight = 30;
-    const int GridWidth = 100;
-    const int numBlacks = 1000;
+    const int GridHeight = 150;
+    const int GridWidth = 500;
+    const int numBlacks = 10000;
     [Range(1,3)]
     public int FileNumber = 1; 
     public GameObject blackTemplate; 
